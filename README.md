@@ -10,6 +10,5 @@ openshell sandbox upload my-box Dockerfile /tmp
 ```
 # known issue
 out of docker memory. avoid by following above to get openshell v0.0.26
-1. git clone https://github.com/NVIDIA/OpenShell.git os
-1. cd os
-1. uv tool install -U openshell
+1. curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | OPENSHELL_VERSION=dev sh
+1. curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
