@@ -6,7 +6,8 @@
 # to run sandboxed AI agents (e.g. NemoClaw/OpenClaw). This script installs the
 # OpenShell CLI + gateway and the Docker compute driver it requires.
 #
-# Per-boot bring-up of dockerd and the gateway lives in start.sh.
+# Per-boot bring-up of dockerd and the gateway runs as terminals
+# (see .cursor/environment.json -> dockerd.sh and gateway.sh).
 set -euo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
@@ -68,4 +69,4 @@ else
   log "gateway certificates already present"
 fi
 
-log "done. Run start.sh (per boot) to launch dockerd + the OpenShell gateway."
+log "done. The dockerd + openshell-gateway terminals launch the runtime per boot."

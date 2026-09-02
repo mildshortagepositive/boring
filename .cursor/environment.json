@@ -2,5 +2,16 @@
   "name": "OpenShell dev environment",
   "user": "ubuntu",
   "install": "bash .cursor/install.sh",
-  "start": "bash .cursor/start.sh"
+  "terminals": [
+    {
+      "name": "dockerd",
+      "command": "bash .cursor/dockerd.sh",
+      "description": "Docker daemon (OpenShell's compute driver). Logs are visible here."
+    },
+    {
+      "name": "openshell-gateway",
+      "command": "bash .cursor/gateway.sh",
+      "description": "OpenShell gateway on https://127.0.0.1:17670. Use `openshell sandbox ...` from any shell."
+    }
+  ]
 }
